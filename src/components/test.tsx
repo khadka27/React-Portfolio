@@ -1,5 +1,4 @@
 import React from "react";
-import { Meteors } from "./ui/meteors";
 
 function Test() {
   return (
@@ -37,9 +36,6 @@ function Test() {
           <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
             Explore
           </button>
-
-          {/* Meaty part - Meteor effect */}
-          <Meteors number={20} />
         </div>
       </div>
     </div>
