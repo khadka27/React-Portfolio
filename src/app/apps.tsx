@@ -5,6 +5,8 @@ import Test from "@/components/test";
 import React from "react";
 import Item from "@/components/ui/scroll";
 import Skills from "@/components/Skills";
+import { InfiniteMovingCardsDemo } from "@/components/moving-card";
+import ContactForm from "@/components/contact";
 
 function apps() {
   return (
@@ -15,6 +17,8 @@ function apps() {
       <Project />
       <Skills />
       <Test />
+      <InfiniteMovingCardsDemo />
+      <ContactForm />
     </div>
   );
 }

@@ -205,3 +205,72 @@ circle {
     font-size: 50px;
   }
 }
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: bold !important;
+  letter-spacing: 5px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 64px;
+  background: linear-gradient(
+    to right,
+    hwb(0 99% 1%) 0,
+    hsl(184, 100%, 52%) 10%,
+    hsl(0, 0%, 100%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+
+/* moving div */
+
+/* InfiniteMovingDivs.css */
+.infinite-moving-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+}
+
+.moving-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+  background-color: #3498db; /* Example background color */
+  animation: move-right 10s linear infinite;
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Offset each div for demonstration */
+.moving-div:nth-child(2) {
+  background-color: #e74c3c; /* Different color */
+  animation-delay: -5s; /* Delayed start */
+}
+
+.moving-div:nth-child(3) {
+  background-color: #2ecc71; /* Another different color */
+  animation-delay: -2.5s; /* Delayed start */
+}

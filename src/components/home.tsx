@@ -62,9 +62,9 @@ const HomePage = () => {
         </div>
         {/* Main text */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-          <h2 className="relative inline-block p-2 border-2 border-transparent rounded-md bg-clip-border bg-gradient-to-r from-red-500 to-yellow-500 transition-all duration-500 ease-in-out mb-10 hover:border-white">
-            <span className="text-white">Abishek Khadka</span>
-          </h2>
+          <h1 className="  font-bold h-10 relative inline-block p-2 border-2 border-transparent rounded-md bg-clip-border bg-gradient-to-r from-red-500 to-yellow-500 transition-all duration-500 ease-in-out mb-10 hover:border-white">
+            <span className="text-white"> Abishek Khadka</span>
+          </h1>
 
           <ShootingStar />
           <h1 className="text-4xl font-bold text-gray-800 dark:text-sky-500 lg:text-5xl flex-col">
