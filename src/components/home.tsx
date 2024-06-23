@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import AboutImage from "./Images/homepage.png"; // Adjust the path to your image
 import logo from "./Images/logo.png"; // Adjust the path to your image
+import ShootingStar from "./ShootingStar";
+import SocialIcons from "./SocialIcons";
+import { Globes } from "./globe";
 
 const MotionImage = motion(Image);
 
@@ -20,6 +23,10 @@ const HomePage = () => {
 
   return (
     <section className="bg-white dark:bg-gray-900 mt-1">
+      <div className="text-white dark:text-red-600"></div>
+      {/* <div className="h-10 w-[310px] flex justify-end ml-[78%] ">
+        <Globes  />
+      </div> */}
       {/* logo and navbar */}
       <header className="flex items-center  justify-between max-w-6xl mx-1 lg:p-8 m-0">
         <Image
@@ -27,7 +34,7 @@ const HomePage = () => {
           alt="logo"
           width={70}
           height={70}
-          className="bg-gray-300 dark:bg-white rounded-full"
+          className="bg-gray-300 dark:bg-white custom-rounded"
         />
       </header>
 
@@ -39,7 +46,7 @@ const HomePage = () => {
           <MotionImage
             src={AboutImage}
             alt="About"
-            className="rounded-full border-4 border-yellow-400 dark:border-sky-500 h-64 w-64"
+            className="custom-rounded border-4 border-yellow-400 dark:border-sky-500 h-64 w-64"
             initial={{ borderColor: "rgba(0, 255, 255, 1)" }}
             animate={{
               borderColor: ["rgba(0, 255, 255, 1)", "rgba(0, 255, 255, 0)"],
@@ -55,9 +62,11 @@ const HomePage = () => {
         </div>
         {/* Main text */}
         <div className="lg:col-span-7 flex flex-col justify-center">
-          <h2 className="relative inline-block p-2 border-2 border-transparent rounded-md bg-clip-border bg-gradient-to-r from-red-500 to-yellow-500 animate-border-animation">
-            <span>Abishek Khadka</span>
+          <h2 className="relative inline-block p-2 border-2 border-transparent rounded-md bg-clip-border bg-gradient-to-r from-red-500 to-yellow-500 transition-all duration-500 ease-in-out mb-10 hover:border-white">
+            <span className="text-white">Abishek Khadka</span>
           </h2>
+
+          <ShootingStar />
           <h1 className="text-4xl font-bold text-gray-800 dark:text-sky-500 lg:text-5xl flex-col">
             Hello, I&apos;m{" "}
             <Typewriter
@@ -73,10 +82,11 @@ const HomePage = () => {
               }}
             />
           </h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 lg:text-xl mr-11">
-            I&apos;m a full-stack web developer and a freelance writer. I write
-            about web development, technology, and personal development. I also
-            love to teach and share my knowledge with others.
+          <p className=" mt-4 text-gray-600 dark:text-gray-300 lg:text-xl mr-11">
+            👋 Hello! I&apos;m Abishek Khadka, a Full Stack Developer with a
+            passion for crafting dynamic web solutions. Explore my portfolio
+            where each visit brings a refreshing animated experience, reflecting
+            my commitment to seamless design and functionality.
           </p>
           <div className="mt-8">
             <a
@@ -86,13 +96,20 @@ const HomePage = () => {
               Hire me
             </a>
           </div>
+
+          <div className="mt-5">
+            <p className="bouncy-text mb-1 text-black dark:text-sky-500 ">
+              Connect with me
+            </p>
+            <SocialIcons />
+          </div>
         </div>
         {/* Desktop image */}
         <div className="hidden lg:flex lg:col-span-5 justify-center items-center">
           <MotionImage
             src={AboutImage}
             alt="About"
-            className="rounded-full border-4 border-sky-500 h-[85%] w-[50%]"
+            className="custom-rounded border-4 bouder-r border-sky-500 h-[50%] w-[52%]"
             initial={{ borderColor: "rgba(0, 255, 255, 1)" }}
             animate={{
               borderColor: ["rgba(0, 255, 255, 1)", "rgba(0, 255, 255, 0)"],

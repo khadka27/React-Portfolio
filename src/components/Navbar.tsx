@@ -5,10 +5,9 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import DarkModeToggle from "./DarkModeToggle";
 
 // Utility function to conditionally join class names
-const cn = (...classes: (string | boolean | null | undefined)[]) =>
-  classes.filter(Boolean).join(" ");
+const cn = (...classes: string[]) => classes.filter(Boolean).join(" ");
 
-function Navbar({ className = "" }: { className?: string }) {
+function Navbar({ className = "" }) {
   const [active, setActive] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -25,7 +24,7 @@ function Navbar({ className = "" }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-2 inset-x-0 max-w-full sm:max-w-2xl mx-auto z-50 bg-black dark:bg-white rounded-lg p-3 shadow-lg transition duration-300 mt-auto sm:mt-0",
+        "fixed top-2 inset-x-0 max-w-full sm:max-w-2xl mx-auto z-50 bg-black dark:bg-gray-200 rounded-lg p-3 shadow-lg transition duration-300 mt-auto sm:mt-4",
         className
       )}
     >
@@ -58,7 +57,7 @@ function Navbar({ className = "" }: { className?: string }) {
 
         <div
           className={cn(
-            "sm:flex flex-row sm:flex-row items-center w-full sm:w-auto transition duration-300",
+            "sm:flex flex-row items-center w-full sm:w-auto transition duration-300",
             isOpen ? "block" : "hidden sm:flex"
           )}
         >
@@ -70,8 +69,8 @@ function Navbar({ className = "" }: { className?: string }) {
             <Link href="#about" legacyBehavior>
               <a
                 className={cn(
-                  "p- font-semibold transition duration-300",
-                  isHovered
+                  "p-2 font-semibold transition duration-300",
+                  active === "#about"
                     ? "text-sky-600 dark:text-sky-500"
                     : "text-gray-300 dark:text-gray-600",
                   "hover:text-sky-500 dark:hover:text-sky-400"
@@ -82,14 +81,14 @@ function Navbar({ className = "" }: { className?: string }) {
             </Link>
 
             {isHovered && (
-              <div className="absolute left-0 mt-2 flex flex-col space-y-2 bg-white dark:bg-gray-800 p-4 rounded shadow-lg">
+              <div className="absolute left-0 mt-2 flex flex-col space-y-2 bg-black dark:bg-gray-200 p-4 rounded shadow-lg border-white">
                 <Link href="#skills" legacyBehavior>
-                  <a className="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400">
+                  <a className="p-2 text-gray-100 dark:text-gray-800 hover:text-sky-500 dark:hover:text-sky-400">
                     Skills
                   </a>
                 </Link>
                 <Link href="#projects" legacyBehavior>
-                  <a className="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-400">
+                  <a className="p-2 text-gray-100 dark:text-gray-800 hover:text-sky-500 dark:hover:text-sky-400">
                     Projects
                   </a>
                 </Link>
