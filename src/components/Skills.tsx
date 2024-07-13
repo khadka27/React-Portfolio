@@ -30,16 +30,16 @@ const SkillBox = ({
         <Image
           src={image}
           alt={title}
-          width={48}
-          height={48}
-          className="w-12 h-12"
+          width={50}
+          height={50}
+          className="w-12 h-12 bg-transparent"
         />
         <div>
           <h3 className="font-semibold text-lg">
             {title}{" "}
             <Link href={link} legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
-                🔗
+                🔗 
               </a>
             </Link>
           </h3>
@@ -116,12 +116,37 @@ export default function Home() {
       description: "High-level Python web framework.",
       link: "#",
     },
+    {
+      image: html,
+      title: "Node.js",
+      description: "JavaScript runtime for server-side development.",
+      link: "#",
+    },
+    {
+      image: html,
+      title: "Python",
+      description:
+        "High-level programming language for general-purpose programming.",
+      link: "#",
+    },
+    {
+      image: html,
+      title: "Java",
+      description: "Object-oriented programming language.",
+      link: "#",
+    },
+    {
+      image: html,
+      title: "Django",
+      description: "High-level Python web framework.",
+      link: "#",
+    },
   ];
 
   return (
-    <div className="bg-gray-900 text-white font-sans p-6">
+    <div className="bg-gray-900 text-white font-sans px-10 ">
       <section className="body-font bg-gray-200 dark:bg-gray-900" id="skills">
-        <div className="relative flex items-center justify-center mb-10">
+        <div className="relative flex items-center justify-center">
           <div className="relative z-10 text-center">
             <h2 className="text-5xl font-bold mb-4">Skills</h2>
           </div>

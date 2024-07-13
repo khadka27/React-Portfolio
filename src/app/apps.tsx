@@ -1,11 +1,10 @@
 import About from "@/components/About";
 import Project from "@/components/Project";
 import Home from "@/components/home";
-import Test from "@/components/test";
+import Slogan from "@/components/Slogan";
 import React from "react";
 import Item from "@/components/ui/scroll";
 import Skills from "@/components/Skills";
-import { InfiniteMovingCardsDemo } from "@/components/moving-card";
 import ContactForm from "@/components/contact";
 
 function apps() {
@@ -16,8 +15,7 @@ function apps() {
       <About />
       <Project />
       <Skills />
-      <Test />
-      <InfiniteMovingCardsDemo />
+      <Slogan />
       <ContactForm />
     </div>
   );

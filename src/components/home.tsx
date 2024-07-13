@@ -8,6 +8,7 @@ import logo from "./Images/logo.png"; // Adjust the path to your image
 import ShootingStar from "./ShootingStar";
 import SocialIcons from "./SocialIcons";
 import { Globes } from "./globe";
+import Link from "next/link";
 
 const MotionImage = motion(Image);
 
@@ -89,12 +90,12 @@ const HomePage = () => {
             my commitment to seamless design and functionality.
           </p>
           <div className="mt-8">
-            <a
-              href="#"
+            <Link
+              href=".hire"
               className="px-4 py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600"
             >
               Hire me
-            </a>
+            </Link>
           </div>
 
           <div className="mt-5">
